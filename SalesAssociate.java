@@ -12,6 +12,15 @@ package store;
  * @author Goteti Santosh Ravi Teja
  */
 public class SalesAssociate extends AbstractStoreEmployee {
+    @Override
+    public int countDay(double jamKerja) {
+        return ((int)jamKerja/24);
+    }
+
+    @Override
+    public double calculateTaxShop(double completedSales) {
+        return completedSales*0.1;
+    }
 
     private final double salesRate;
 
@@ -33,6 +42,11 @@ public class SalesAssociate extends AbstractStoreEmployee {
             String storeDetails, String associateName, double basePay) {
         super(numberOfHoursWorked, hourlyRate, storeDetails, basePay, associateName);
         this.salesRate = salesRate;
+    }
+
+    @Override
+    public void assignTask(String task) {
+        System.out.println(getEmployeeName() + " has been assigned the task: " + task);
     }
 
     /**

@@ -11,10 +11,23 @@ package store;
  * @author Goteti Santosh Ravi Teja
  */
 public class Manager extends AbstractStoreEmployee {
-
     private double bonusRate;
     private double salesDone;
+
     private double totalStoreSales;
+
+    @Override
+    public int countDay(double jamKerja) {
+        return ((int) jamKerja/24);
+    }
+    @Override
+    public double calculateTaxShop(double completedSales) {
+        return 0;
+    }
+
+    public void assignTask(String task) {
+        System.out.println(getEmployeeName() + " has been assigned the task: " + task);
+    }
 
     /**
      * This is an Argument constructor which Initializes all the Instance
@@ -157,5 +170,4 @@ public class Manager extends AbstractStoreEmployee {
         return super.toString() + "Total Sales in store: $" + totalStoreSales
                 + "\nSales done: $" + salesDone;
     }
-
 }

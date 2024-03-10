@@ -11,8 +11,13 @@ package store;
  * @author Goteti Santosh Ravi Teja
  */
 public interface Employee {
+    /**
+     * This method akan menghitung jumlah hari pegawai bekerja
+     *
+     * @return- This method returns int day
+     */
+    int countDay(double jamKerja);
 
-    
     /**
      * This method Calculates the pay of the employee.
      *
@@ -27,5 +32,6 @@ public interface Employee {
      * promotion. for an employee.
      */
     boolean checkPromotionEligibility();
+
 
 }

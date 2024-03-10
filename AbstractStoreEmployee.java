@@ -13,10 +13,12 @@ package store;
  */
 public abstract class AbstractStoreEmployee implements Employee, Store {
 
+    public abstract void assignTask(String task);
     private double basePay;
     String employeeName;
     private double hourlyRate;
     private double numberOfHoursWorked;
+
     private String storeDetails;
 
     /**

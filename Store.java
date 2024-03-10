@@ -11,12 +11,14 @@ package store;
  * @author Goteti Santosh Ravi Teja
  */
 public interface Store {
+    public double calculateTaxShop(double completedSales);
+
 
     /**
      * It is a constant field value.
      */
     static final double COMMISSION_RATE = 0.10;
-    
+
 
     /**
      * It is a constant field value.
@@ -25,7 +27,7 @@ public interface Store {
 
     /**
      *
-     * @return 
+     * @return
      * @return- This method returns the calculateCommission.
      */
     public double calculateCommission();
