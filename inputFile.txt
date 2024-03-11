@@ -2,7 +2,22 @@ Manager
 BubuStore
 Reciii
 21
-9
+480
 1
 50
 25
+Sales
+BubuStoree
+apa aja
+24
+490
+2
+23
+Cashier
+BubuStoree
+agung
+24
+540
+2
+18
+8

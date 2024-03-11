@@ -1,11 +1,13 @@
 package store;
 
 public class Cashier extends AbstractStoreEmployee {
+    private int kesalahan;
     private double completedSales;
 
-    public Cashier(double numberOfHoursWorked, double hourlyRate, String storeDetails, double basePay, String employeeName, double completedSales) {
+    public Cashier(double numberOfHoursWorked, double hourlyRate, String storeDetails, double basePay, String employeeName, double completedSales, int kesalahan) {
         super(numberOfHoursWorked, hourlyRate, storeDetails, basePay, employeeName);
         this.completedSales = completedSales;
+        this.kesalahan = kesalahan;
     }
 
     @Override
@@ -32,7 +34,7 @@ public class Cashier extends AbstractStoreEmployee {
     @Override
     public boolean checkPromotionEligibility() {
         // Logika untuk mengecek kelayakan promosi Cashier
-        if (getNumberOfHoursWorked() >= 40 && completedSales >= 1000) {
+        if (getNumberOfHoursWorked() >= 40 && completedSales >= 1000 && kesalahan <=10) {
             return true;
         } else {
             return false;
@@ -47,4 +49,5 @@ public class Cashier extends AbstractStoreEmployee {
     public void setCompletedSales(double completedSales) {
         this.completedSales = completedSales;
     }
+
 }

@@ -50,7 +50,7 @@ public abstract class AbstractStoreEmployee implements Employee, Store {
      */
     @Override
     public double calculateCommission() {
-        return 0;
+        return 20;
     }
 
     /**
